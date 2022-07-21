@@ -14,15 +14,25 @@ return require('packer').startup(function(use)
     use { 'Mofiqul/dracula.nvim' }
 
     -- [[ Language Helpers ]]
-    use { 'mhanberg/elixir.nvim', requires={'neovim/nvim-lspconfig', 'nvim-lua/plenary.nvim'}}
+    -- use { 'mhanberg/elixir.nvim', requires={'neovim/nvim-lspconfig', 'nvim-lua/plenary.nvim'}}
+    -- use { 'elixir-editors/vim-elixir' }
+    -- use { 'neovim/nvim-lspconfig' }
+    use { 'neovim/nvim-lspconfig' }
+
+
     -- [[ Dev ]]
     use {
         'nvim-telescope/telescope.nvim',                 -- fuzzy finder
         requires = { {'nvim-lua/plenary.nvim'} }
     }
+    use { 'dense-analysis/ale' }
     use { 'majutsushi/tagbar' }                        -- code structure
     use { 'Yggdroot/indentLine' }                      -- see indentation
     use { 'tpope/vim-fugitive' }                       -- git integration
     use { 'junegunn/gv.vim' }                          -- commit history
     use { 'windwp/nvim-autopairs' }                    -- auto close brackets, etc.
-end)
+    use { 'slashmili/alchemist.vim' }
+    use { 'elixir-editors/vim-elixir' }
+    use { 'neoclide/coc.nvim', branch = 'release'}
+    use { 'elixir-lsp/coc-elixir' }
+end) 
